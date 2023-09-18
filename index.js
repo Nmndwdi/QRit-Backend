@@ -30,10 +30,10 @@ mongoose.connect(DB).then(()=>{
     console.log(e);
 });
 
-app.listen(PORT,"192.168.0.104",()=>{
+app.listen(PORT,()=>{
     console.log(`connected at port ${PORT}`);
 });
 
-// app.get("/",(req,res)=>{
-//     res.json("Hello World");
-// });
+app.use("/",(req,res)=>{
+    res.json("Hello World");
+});
