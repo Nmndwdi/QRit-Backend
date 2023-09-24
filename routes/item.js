@@ -46,7 +46,7 @@ itemRouter.post("/api/get-items",async (req,res) => {
         }
         else
         {
-            return res.status(400).json({msg:'user does not exists'});
+            return res.status(400).json({msg:'You have not added any data'});
         }
     }
     catch (e)
