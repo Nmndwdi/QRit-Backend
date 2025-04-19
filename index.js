@@ -15,14 +15,12 @@ const app=express();
 const DB = databaseURL;
 
 // MIDDLEWARE
-app.options('*', cors())
 app.use(
-    cors ({
-        origin:'https://qrit.vercel.app',
-        credential:true,
-        preflightContinue:true,
+    cors({
+      origin: 'https://qrit.vercel.app',
+      credentials: true,
     })
-);
+  );
 app.use(express.json());
 app.use(authRouter);
 app.use(itemRouter);
